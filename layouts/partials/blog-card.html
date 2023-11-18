@@ -1,7 +1,7 @@
 <div class="p-2">
 <a href="{{ .Permalink }}">
   {{ if .Params.thumbnail }}
-  {{ $thumbnail := printf "%s/%s/%s" .Site.Params.frontBundle .Params.url .Params.thumbnail }}
+  {{ $thumbnail := printf "%s/%s/%s/%s" .Site.Home.Permalink .Site.Params.frontBundle .Params.url .Params.thumbnail }}
   <div class="relative">
     <img src="{{ $thumbnail }}" alt="{{ .Params.title }}" class="rounded-lg shadow-sm w-full h-52 object-cover" />
     {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}
