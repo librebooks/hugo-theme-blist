@@ -1,0 +1,44 @@
+<h3>المؤلف/المترجم</h3>
+
+<div class="taxonomies">
+  {{ range site.Taxonomies.creator }}
+  <li>
+    <a href="{{ .Page.Permalink }}">{{ .Page.Name }}<span>{{ .Count }}</span></a>
+  </li>
+  {{ end }}
+</div>
+
+
+<h3>سنة الإصدار</h3>
+
+<div class="taxonomies">
+  {{ range site.Taxonomies.release }}
+  <li>
+    <a href="{{ .Page.Permalink }}">{{ .Page.Name }}<span>{{ .Count }}</span></a>
+  </li>
+  {{ end }}
+</div>
+
+
+<h3>الترخيص</h3>
+
+<div class="taxonomies">
+  {{ range site.Taxonomies.license }}
+  <li>
+    <a href="{{ .Page.Permalink }}">{{ .Page.Name }}<span>{{ .Count }}</span></a>
+  </li>
+  {{ end }}
+</div>
+
+
+
+<h3>الوسوم</h3>
+
+<div class="taxonomies">
+  {{ range site.Taxonomies.tags }}
+  <li>
+    <a href="{{ .Page.Permalink }}">{{ .Page.Name }}<span>{{ .Count }}</span></a>
+  </li>
+  {{ end }}
+</div>
+
